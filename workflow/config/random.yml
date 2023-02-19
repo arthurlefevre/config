@@ -1,0 +1,14 @@
+name: "Random"
+src: functions/randomNumber.ts
+doc: random.md
+type: faas
+policies:
+  - retries: 0
+  - retriesInterval: 0
+active: true
+triggers:
+  - http:
+      path: /random
+      method: GET
+      exposeName:
+        default: random

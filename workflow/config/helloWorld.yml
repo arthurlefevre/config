@@ -1,0 +1,14 @@
+name: "Hello World"
+src: functions/helloWorld.ts
+doc: helloWorld.md
+type: faas
+policies:
+  - retries: 0
+  - retriesInterval: 0
+active: true
+triggers:
+  - http:
+      path: /helloWorld
+      method: GET
+      exposeName:
+        default: HelloWorld
