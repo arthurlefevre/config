@@ -3,7 +3,7 @@ import randomNumber from "./randomNumber";
  *
  * @returns Promise<string>
  */
-export default function helloWorld(): string {
+export default async function helloWorld(): Promise<string> {
   console.log("Helloworld");
-  return `Hello world : ${randomNumber()}`;
+  return `Hello world : ${await randomNumber()}`;
 }
